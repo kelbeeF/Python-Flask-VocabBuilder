@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type ="text/css"  href="{{url_for('static', filename='style.css')}}">
+    <title>Vocabulary Builder</title>
+</head>
+<body>
+<div class="word-search">
+    <h1>Word Search</h1>
+<form id="search" action="{{ url_for('search') }}" method="post">
+
+    <input type="text" name="word" placeholder="Search meaning of word here">
+    <button>Submit</button>
+</form>
+</div>
+
+<div class="learning-list">
+    <h1>Learning List</h1>
+<form id="learning-list" action="{{ url_for('index') }}" method="post">
+    <ul>
+    {% for row in learnedRows %}
+        <li>{{ row['word'] }}</li>
+    {% endfor %}
+    </ul>
+
+    <input type="text" name="mastered-word" placeholder="Remove word">
+    <button>Submit</button>
+</form>
+</div>
+
+<div class="mastered-list">
+    <h1>Mastered List</h1>
+<form id="mastered-list" action="{{ url_for('index') }}" method="post">
+    <ul>
+    {% for row in masteredRows %}
+        <li>{{ row['word'] }}</li>
+    {% endfor %}
+    </ul>
+    <input type="text" name="learned-word" placeholder="Still learning this word?">
+    <button>Submit</button>
+</form>
+</div>
+</body>
+</html>

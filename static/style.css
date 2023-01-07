@@ -1,0 +1,74 @@
+* {
+    padding:0px;
+    margin:0px;
+}
+
+html{
+    background:#7497b5;
+}
+
+body {
+    padding:10px;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+
+    position: absolute;
+
+    left:50%; /*To center the business card horizontally*/
+    top:50%; /*To center the business card vertically*/
+    transform: translate(-50%,-50%);
+
+    /*Set the size of the business card*/
+    width: 50%;
+
+    border: 1px solid #000000;
+    border-radius: 10px;
+
+    /*Adding a drop shadow*/
+    box-shadow: rgb(0 0 0) 0px 7px 29px 0px;
+    background:white;
+    color:black;
+}
+
+.word-search{
+    padding-bottom: 5px;
+}
+
+.learning-list{
+    padding: 5px;
+}
+
+.mastered-list{
+    padding: 5px;
+}
+
+.word-search{
+    padding: 50px;
+    margin:5px;
+    background:#7497b5;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0) 0px 7px 29px 0px;
+}
+
+.learning-list{
+    padding: 50px;
+    margin:5px;
+    background:#7497b5;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0) 0px 7px 29px 0px;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mastered-list{
+    padding: 50px;
+    margin:5px;
+    background:#7497b5;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0) 0px 7px 29px 0px;
+}

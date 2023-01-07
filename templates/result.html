@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type ="text/css"  href="{{url_for('static', filename='style.css')}}">
+
+    <title>{{ word }}</title>
+</head>
+<body>
+
+<h1>{{ word }}</h1>
+
+<ul>
+    {% for word_type in word_types %}
+        <h3>{{ word_type }}</h3>
+
+        {% for meaning in meanings[word_type] %}
+            <li>{{ meaning }}</li>
+        {% endfor %}
+    {% endfor %}
+
+</ul>
+
+<a id="back" href="{{ url_for('index') }}">Back</a>
+</body>
+</html>
